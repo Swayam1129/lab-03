@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+    <TextView
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cities"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-    </com.google.android.material.appbar.MaterialToolbar>
+        android:layout_height="59dp"
+        android:background="#009688"
+        android:text=" ListyCity"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:clipToPadding="false"
-        android:padding="8dp" />
+        android:backgroundTint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_add_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#03A9F4"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+
+        android:focusable="true"
+        app:rippleColor="#BD0F0F"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </LinearLayout>
